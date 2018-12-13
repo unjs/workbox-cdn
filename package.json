@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "author": "Google's Web DevRel Team",
   "files": [
-    "dist"
+    "workbox"
   ],
   "scripts": {
     "build": "./scripts/build"
