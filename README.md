@@ -1,7 +1,7 @@
 # Workbox Unofficial CDN
 
 [![automated](https://flat.badgen.net/badge/publish/automated/green)](#)
-[![circle ci](https://flat.badgen.net/circleci/github/nuxtjs-community/workbox-cdn)](https://circleci.com/gh/nuxt-community/workbox-cdn)
+[![circle ci](https://flat.badgen.net/circleci/github/nuxt-community/workbox-cdn)](https://circleci.com/gh/nuxt-community/workbox-cdn)
 [![npm version](https://flat.badgen.net/npm/v/@nuxtjs/workbox-cdn)](https://www.npmjs.com/package/@nuxtjs/workbox-cdn)
 [![npm downloads](https://flat.badgen.net/npm/dt/@nuxtjs/workbox-cdn)](https://www.npmjs.com/package/@nuxtjs/workbox-cdn)
 [![install size](https://flat.badgen.net/packagephobia/install/@nuxtjs/workbox-cdn)](https://packagephobia.now.sh/result?p=@nuxtjs/workbox-cdn)
