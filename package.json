@@ -14,10 +14,14 @@
   "devDependencies": {
     "workbox-cli": "^3.6.3"
   },
-  "contributes": [
+  "contributers": [
     {
       "name": "Pooya Parsa",
       "email": "pooya@pi0.ir"
+    },
+    {
+      "name": "Welson Sukka",
+      "email": "isukkaw@gmail.com"
     }
   ]
 }
