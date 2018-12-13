@@ -23,5 +23,13 @@
       "name": "Welson Sukka",
       "email": "isukkaw@gmail.com"
     }
+  ],
+  "keywords": [
+    "workbox",
+    "workboxjs",
+    "sw",
+    "service-worker",
+    "pwa",
+    "cdn"
   ]
 }
