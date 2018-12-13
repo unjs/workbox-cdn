@@ -5,6 +5,7 @@
   "repository": "nuxt-community/workbox-cdn",
   "license": "Apache-2.0",
   "author": "Google's Web DevRel Team",
+  "main": "workbox/workbox-sw.js",
   "files": [
     "workbox"
   ],
