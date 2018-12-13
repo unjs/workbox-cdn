@@ -9,11 +9,13 @@ mkdir $dist
 ./node_modules/.bin/workbox copyLibraries $dist
 
 dir=`echo $dist/*`
-version=`echo $dir | grep -oE "[0-9.]+"`
+version=`echo $dir | grep -oE "[0-9.]+"`$suffix
 
 mv $dir/* $dist
 rmdir $dir
 
 perl -pi -e "s|\"version\": .+|\"version\": \"$version\",|" "package.json"
+
+find workbox -type f | xargs perl -pi -e "s|https://storage.googleapis.com/workbox-cdn/releases/[^\"]+|https://unpkg.com/workbox-cdn\@$version/workbox/|g;"
 
 echo "workbox-cdn@$version"
