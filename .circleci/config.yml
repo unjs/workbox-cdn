@@ -7,7 +7,7 @@ defaults: &defaults
 
 jobs:
     # Build
-    build-and-publish:
+    build:
         <<: *defaults
         steps:
         - checkout
