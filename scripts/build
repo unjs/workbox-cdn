@@ -1,0 +1,17 @@
+#!/bin/bash
+set -e
+
+rm -rf dist
+mkdir dist
+
+./node_modules/.bin/workbox copyLibraries dist
+
+dir=`echo dist/*`
+version=`echo $dir | grep -oE "[0-9.]+"`
+
+mv $dir/* dist
+rmdir $dir
+
+perl -pi -e "s|\"version\": .+|\"version\": \"$version\",|" "package.json"
+
+echo "workbox-cdn@$version"

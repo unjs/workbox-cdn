@@ -1,0 +1,17 @@
+{
+  "name": "@nuxtjs/workbox-cdn",
+  "version": "0.0.0",
+  "description": "Workbox CDN",
+  "repository": "nuxt-community/workbox-cdn",
+  "license": "MIT",
+  "author": "Pooya Parsa <pooya@pi0.ir>",
+  "scripts": {
+    "build": "./scripts/build"
+  },
+  "files": [
+    "dist"
+  ],
+  "devDependencies": {
+    "workbox-cli": "^3.6.3"
+  }
+}

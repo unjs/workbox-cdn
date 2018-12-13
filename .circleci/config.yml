@@ -1,0 +1,32 @@
+version: 2
+
+defaults: &defaults
+  working_directory: ~/project
+  docker:
+    - image: node
+
+jobs:
+    # Build
+    build-and-publish:
+        <<: *defaults
+        steps:
+        - checkout
+        - restore_cache:
+            key: yarn-{{ checksum "yarn.lock" }}
+        - run:
+            name: Install Dependencies
+            command: NODE_ENV=dev yarn
+        - save_cache:
+            key: yarn-{{ checksum "yarn.lock" }}
+            paths:
+                - "node_modules"
+        - run:
+            name: Build
+            command: ./scripts/build
+        - run:
+            name: Publish
+            command: |
+                echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+                echo "//registry.yarnpkg.com/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+                npm publish || true
+
