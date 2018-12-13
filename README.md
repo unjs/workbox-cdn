@@ -24,7 +24,7 @@ You have two options:
 
 ### Option 1: UNPKG
 
-Use `https://unpkg.com/workbox-cdn@^3.0.0/workbox`
+Use `https://unpkg.com/workbox-cdn/workbox`
 
 ### Option 2: NPM Package
 
