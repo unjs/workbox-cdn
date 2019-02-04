@@ -5,6 +5,7 @@
 [![npm version](https://flat.badgen.net/npm/v/workbox-cdn)](https://www.npmjs.com/package/workbox-cdn)
 [![npm downloads](https://flat.badgen.net/npm/dt/workbox-cdn)](https://www.npmjs.com/package/workbox-cdn)
 [![install size](https://flat.badgen.net/packagephobia/install/workbox-cdn)](https://packagephobia.now.sh/result?p=workbox-cdn)
+[![](https://data.jsdelivr.com/v1/package/npm/workbox-cdn/badge)](https://www.jsdelivr.com/package/npm/workbox-cdn)
 
 [Workbox](https://developers.google.com/web/tools/workbox) Unofficial CDN and standalone NPM package.
 
@@ -22,9 +23,9 @@ See https://goo.gl/Fo9gPX for further documentation.
 
 You have two options:
 
-### Option 1: UNPKG
+### Option 1: JSDelivr
 
-Use `https://unpkg.com/workbox-cdn/workbox`
+Use `https://cdn.jsdelivr.net/npm/workbox-cdn/workbox/workbox-sw.js`
 
 ### Option 2: NPM Package
 

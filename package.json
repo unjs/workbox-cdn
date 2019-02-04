@@ -1,6 +1,6 @@
 {
   "name": "workbox-cdn",
-  "version": "0.0.0",
+  "version": "3.6.3-3",
   "description": "Workbox Unofficial CDN",
   "repository": "nuxt-community/workbox-cdn",
   "license": "Apache-2.0",

@@ -16,6 +16,6 @@ rmdir $dir
 
 perl -pi -e "s|\"version\": .+|\"version\": \"$version\",|" "package.json"
 
-find workbox -type f | xargs perl -pi -e "s|https://storage.googleapis.com/workbox-cdn/releases/[^\"]+|https://unpkg.com/workbox-cdn\@$version/workbox/|g;"
+find workbox -type f | xargs perl -pi -e "s|https://storage.googleapis.com/workbox-cdn/releases/[^\"]+|https://cdn.jsdelivr.net/npm/workbox-cdn\@$version/workbox/|g;"
 
 echo "workbox-cdn@$version"
