@@ -1,21 +1,30 @@
 #!/bin/bash
 set -e
 
+# CLeanup old dist
 dist=workbox
-
 rm -rf $dist
 mkdir $dist
 
+# Copy workbox libraries
 ./node_modules/.bin/workbox copyLibraries $dist
 
+# Info
 dir=`echo $dist/*`
 version=`echo $dir | grep -oE "[0-9.]+"`$suffix
 
+# Normalize
 mv $dir/* $dist
 rmdir $dir
+rm $dist/*.map
 
+# Bump version
 perl -pi -e "s|\"version\": .+|\"version\": \"$version\",|" "package.json"
 
-find workbox -type f | xargs perl -pi -e "s|https://storage.googleapis.com/workbox-cdn/releases/[^\"]+|https://cdn.jsdelivr.net/npm/workbox-cdn\@$version/workbox/|g;"
+# Better CDN
+find workbox -type f | xargs perl -pi -e "s|https://storage.googleapis.com/workbox-cdn/releases/[^\"]+|https://cdn.jsdelivr.net/npm/workbox-cdn\@$version/workbox/|g"
+
+# Remove sourcemap references
+find workbox -type f | xargs perl -pi -e "s|^//# .+||g"
 
 echo "workbox-cdn@$version"
