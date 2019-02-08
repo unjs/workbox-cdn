@@ -11,7 +11,8 @@ mkdir $dist
 
 # Info
 dir=`echo $dist/*`
-version=`echo $dir | grep -oE "[0-9.]+"`$suffix
+version=`echo $dir | grep -oE "v[a-z0-9.-]+$"`$suffix
+version=${version:1}
 
 # Normalize
 mv $dir/* $dist
