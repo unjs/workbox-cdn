@@ -32,7 +32,7 @@ jobs:
                 [[ "$tag" == "master" ]] && tag="latest"
                 echo "Publish with tag: $tag"
                 npm publish -q --tag "$tag" || true
-          branches:
+        branches:
             only:
             - master
             - next
