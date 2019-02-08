@@ -12,12 +12,12 @@ jobs:
         steps:
         - checkout
         - restore_cache:
-            key: yarn-{{ checksum "yarn.lock" }}
+            key: yarn-cache-{{ checksum "yarn.lock" }}
         - run:
             name: Install Dependencies
             command: NODE_ENV=dev yarn
         - save_cache:
-            key: yarn-{{ checksum "yarn.lock" }}
+            key: yarn-cache-{{ checksum "yarn.lock" }}
             paths:
                 - "node_modules"
         - run:
