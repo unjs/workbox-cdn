@@ -3,7 +3,7 @@ version: 2
 defaults: &defaults
   working_directory: ~/project
   docker:
-    - image: node
+    - image: circleci/node
 
 jobs:
     # Build
@@ -28,5 +28,12 @@ jobs:
             command: |
                 echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
                 echo "//registry.yarnpkg.com/:_authToken=$NPM_TOKEN" >> ~/.npmrc
-                npm publish || true
+                tag=`git branch | sed -n -e 's/^\* \(.*\)/\1/p'`
+                [[ "$tag" == "master" ]] && tag="latest"
+                echo "Publish with tag: $tag"
+                npm publish -q --tag "$tag" || true
+          branches:
+            only:
+            - master
+            - next
 
