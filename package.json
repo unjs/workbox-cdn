@@ -15,7 +15,7 @@
   "devDependencies": {
     "workbox-cli": "^3.6.3"
   },
-  "contributers": [
+  "contributors": [
     {
       "name": "Pooya Parsa",
       "email": "pooya@pi0.ir"
