@@ -1,4 +1,7 @@
 {
+  "extends": [
+    "@nuxtjs"
+  ],
   "automergeType": "branch",
   "automerge": true
 }
