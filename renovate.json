@@ -2,6 +2,10 @@
   "extends": [
     "@nuxtjs"
   ],
+  "baseBranches": [
+    "master",
+    "dev"
+  ],
   "automergeType": "branch",
   "automerge": true
 }
