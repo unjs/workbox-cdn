@@ -2,8 +2,8 @@
   "name": "workbox-cdn",
   "version": "0.0.0",
   "description": "Workbox Unofficial CDN",
-  "repository": "nuxt-communty/workbox-cdn",
-  "license": "Apache-2.0",
+  "repository": "nuxt-community/workbox-cdn",
+  "license": "MIT",
   "author": "Google's Web DevRel Team",
   "main": "workbox/workbox-sw.js",
   "files": [
@@ -13,7 +13,7 @@
     "build": "./scripts/build"
   },
   "devDependencies": {
-    "workbox-cli": "^4.0.0-rc.4"
+    "workbox-cli": "5.0.0-alpha.2"
   },
   "contributors": [
     {
