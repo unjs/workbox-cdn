@@ -13,7 +13,7 @@
     "build": "./scripts/build"
   },
   "devDependencies": {
-    "workbox-cli": "^4.3.1"
+    "workbox-cli": "^5.0.0"
   },
   "contributors": [
     {
