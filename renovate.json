@@ -3,8 +3,7 @@
     "@nuxtjs"
   ],
   "baseBranches": [
-    "master",
-    "next"
+    "master"
   ],
   "automergeType": "branch",
   "automerge": true
