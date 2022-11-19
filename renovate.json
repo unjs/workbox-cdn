@@ -1,10 +1,5 @@
 {
   "extends": [
-    "@nuxtjs"
-  ],
-  "baseBranches": [
-    "master"
-  ],
-  "automergeType": "branch",
-  "automerge": true
+    "github>unjs/renovate-config"
+  ]
 }
