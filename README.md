@@ -7,29 +7,37 @@
 [![install size](https://flat.badgen.net/packagephobia/install/workbox-cdn)](https://packagephobia.now.sh/result?p=workbox-cdn)
 [![](https://data.jsdelivr.com/v1/package/npm/workbox-cdn/badge)](https://www.jsdelivr.com/package/npm/workbox-cdn)
 
-[Workbox](https://github.com/GoogleChrome/workbox) Unofficial CDN and standalone NPM package.
+[Workbox](https://github.com/GoogleChrome/workbox) unofficial CDN and standalone NPM package.
+
+> [!IMPORTANT]
+> This redist is not maintained and uses older **v5** version of workbox CDN.
 
 ## Why?
 
 - Having public usage/download stats
 - The `local` type costs `~8M` install size for `workbox-cli` package vs `< 1Mb` of this package
-- Default workbox CDN is hosted on `storage.googleapis.com` which is sometimes unavailable
+- Default workbox CDN is hosted on `storage.googleapis.com` which was restricted on some regions
 
 ## Usage
 
-Add a call to `workbox.setConfig({modulePathPrefix: '...'})` to your service worker to use hosted workbox libraries.
-
-See https://goo.gl/Fo9gPX for further documentation.
+Add a call to `workbox.setConfig({modulePathPrefix: '...'})` to your service worker to use hosted workbox libraries. See [Using Local Workbox Files Instead of CDN](https://developer.chrome.com/docs/workbox/modules/workbox-sw/#.setConfig) for further documentation.
 
 You have two options:
 
 ### Option 1: JSDelivr
 
-Use `https://cdn.jsdelivr.net/npm/workbox-cdn/workbox/workbox-sw.js`
+Use `https://cdn.jsdelivr.net/npm/workbox-cdn@5/workbox/workbox-sw.js`:
+
+```js
+workbox.setConfig({
+  modulePathPrefix:
+    "https://cdn.jsdelivr.net/npm/workbox-cdn@5/workbox/workbox-sw.js",
+});
+```
 
 ### Option 2: NPM Package
 
-Install `workbox-cdn` package with `yarn add workbox-cdn` or `npm i workbox-cdn` and integrate it with your own build system or serve contents of `workbox` dir
+Install `workbox-cdn` package with `yarn add workbox-cdn` or `npm i workbox-cdn` and integrate it with your own build system or serve contents of `workbox` dir.
 
 ## License
 
