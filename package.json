@@ -2,7 +2,10 @@
   "name": "workbox-cdn",
   "version": "0.0.0",
   "description": "Workbox Unofficial CDN",
-  "repository": "unjs/workbox-cdn",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unjs/workbox-cdn.git"
+  },
   "license": "MIT",
   "author": "Google's Web DevRel Team",
   "main": "workbox/workbox-sw.js",
